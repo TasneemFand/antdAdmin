@@ -1,10 +1,14 @@
+import { RouterProvider } from "react-router-dom";
+import { createRouter } from "./providers/router";
+import { Suspense } from "react";
+import Loader from "./components/Loader/Loader";
+
 function App() {
   return (
     <>
-      <div>
-        This is a test page for the React app. It should display "Hello, World!"
-        in an h1 element.
-      </div>
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={createRouter()} />
+      </Suspense>
     </>
   );
 }
