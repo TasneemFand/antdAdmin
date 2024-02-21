@@ -16,6 +16,7 @@ import { useState } from "react";
 import { TSignIn } from "../types";
 import { useSignIn } from "../hooks/useSignIn";
 import { setCookie } from "../../../utils/axiosInstanse";
+import { PATH_DASHBOARD } from "../../dashboard/constants";
 
 const { Title } = Typography;
 
@@ -35,7 +36,7 @@ const SignInPage = () => {
         .then((data) => {
           setLoading(false);
           setCookie("TOKEN-AUTH", data.token, 30);
-          navigate("/", { replace: true });
+          navigate(PATH_DASHBOARD.products, { replace: true });
         })
         .catch(() =>
           message.open({
