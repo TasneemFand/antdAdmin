@@ -3,9 +3,9 @@
 This project build with vite and typeScript. using antd design components.
 
 - SetUp Project:
- - install dependencies:
+ -  install dependencies:
  npm install
- - Run the project:
+  - Run the project:
  npm run dev
 
 
